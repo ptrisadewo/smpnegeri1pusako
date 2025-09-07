@@ -1,0 +1,661 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMPN 1 Pusako — Profil Sekolah</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#F6B800; /* kuning identitas */
+      --dark:#0f172a;    /* slate-900 */
+      --muted:#64748b;   /* slate-500 */
+    }
+    body{font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#0b1220;}
+    .navbar{box-shadow:0 6px 24px rgba(2, 6, 23, 0.08); background:#0b1220;}
+    .navbar .nav-link, .navbar .navbar-brand{color:#fff;}
+    .navbar .nav-link:hover, .navbar .nav-link:focus{color:var(--primary);}
+    .brand-title{font-weight:800; letter-spacing:.5px}
+    .brand-title span{color:var(--primary)}
+    /* Hero video */
+    .hero{
+      position:relative; height:85vh; min-height:520px; color:#fff; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;
+    }
+    .hero video{position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; width:auto; height:auto; transform:translate(-50%,-50%); object-fit:cover; filter:brightness(.45);}
+    .hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(2,6,23,.35), rgba(2,6,23,.75));}
+    .hero .content{position:relative; z-index:2; max-width:1000px; padding:0 16px;}
+    .badge-soft{background:rgba(246,184,0,.18); color:#fff; border:1px solid rgba(246,184,0,.35)}
+    .btn-primary{background:var(--primary); border-color:var(--primary); color:#0b1220; font-weight:700;}
+    .btn-primary:hover{filter:brightness(.95);}
+    .section-title{font-weight:800; margin-bottom:18px;}
+    .section-sub{color:var(--muted); margin-bottom:28px;}
+    .stat-card{border:1px solid #e5e7eb; border-radius:14px; padding:22px;}
+    .icon-pill{width:44px; height:44px; border-radius:12px; background:#0b12200f; display:inline-flex; align-items:center; justify-content:center; margin-right:10px;}
+    .feature{border:1px solid #e5e7eb; border-radius:14px;}
+    .feature img{border-top-left-radius:14px; border-top-right-radius:14px; height:180px; object-fit:cover;}
+    .bg-surface{background:#f8fafc;}
+    .timeline{position:relative; padding-left:30px;}
+    .timeline:before{content:""; position:absolute; left:10px; top:0; bottom:0; width:2px; background:#e2e8f0;}
+    .timeline-item{position:relative; margin-bottom:18px;}
+    .timeline-item::marker{content:""}
+    .timeline-dot{position:absolute; left:4px; width:14px; height:14px; border-radius:50%; background:var(--primary); border:3px solid #fff; box-shadow:0 0 0 2px #e2e8f0;}
+    .gallery img{cursor:pointer; border-radius:10px; height:180px; object-fit:cover;}
+    footer{background:#0b1220; color:#cbd5e1;}
+    .table-clean td,.table-clean th{border-color:#e5e7eb;}
+    .dropdown-menu{border-radius:12px;}
+    .lead-hero{font-weight:600; opacity:.95}
+    .logo{height:42px}
+    .org-card{border:1px dashed #e2e8f0; border-radius:12px;}
+    .org-card img{width:80px; height:80px; object-fit:cover; border-radius:10px;}
+    .badge-role{background:#0b122014; color:#0b1220; border:1px solid #e2e8f0}
+    a{ text-decoration:none }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" tabindex="0">
+
+<!-- NAVBAR -->
+<nav id="mainNav" class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+       <span class="brand-title">SMPN <span>1</span> PUSAKO</span>
+        <img src="assets/images/LogoSMP1.png" alt="Logo" class="logo">
+    </a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Profil Sekolah</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="identitas.html">Identitas</a></li>
+            <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+            <li><a class="dropdown-item" href="visi-misi.html">Visi & Misi</a></li>
+            <li><a class="dropdown-item" href="organisasi.html">Struktur Organisasi</a></li>
+            <li><a class="dropdown-item" href="statistik.html">Data Statistik</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Fasilitas</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="fasilitas.html">Daftar Fasilitas</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Kegiatan</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="ekskul.html">Ekstrakurikuler</a></li>
+            <li><a class="dropdown-item" href="program-unggulan.html">Program Unggulan</a></li>
+            <li><a class="dropdown-item" href="#dokumentasi">Dokumentasi</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Informasi</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#kalender">Kalender Akademik</a></li>
+            <li><a class="dropdown-item" href="#jadwal">Jadwal Penting</a></li>
+            <li><a class="dropdown-item" href="#ppdb">Info PPDB</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO VIDEO -->
+<header id="beranda" class="hero">
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/images/overlay.mp4" type="video/mp4">
+  </video>
+  
+  <div class="content">
+    <span class="badge badge-soft px-3 py-2 mb-3">Sekolah berkarakter, Berprestasi, dan Peduli Lingkungan</span>
+    <h1 class="display-4 fw-bold mb-2">SMP NEGERI 1 PUSAKO</h1>
+    <p class="lead lead-hero mb-4">Desa Benayah, Kec. Pusako, Kab. Siak</p>
+    <div class="d-flex gap-2 justify-content-center">
+      <a href="#ppdb" class="btn btn-primary btn-lg"><i class="fa-solid fa-user-graduate me-2"></i>Informasi PPDB</a>
+      <a href="#dokumentasi" class="btn btn-outline-light btn-lg"><i class="fa-regular fa-circle-play me-2"></i>Lihat Profil</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- IDENTITAS SEKOLAH -->
+<section id="identitas" class="py-5 bg-surface">
+  <div class="container">
+    <h2 class="section-title">Identitas Sekolah</h2>
+    <p class="section-sub">Data resmi SMP Negeri 1 Pusako.</p>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7">
+        <table class="table table-clean">
+          <tbody>
+            <tr><th style="width:260px">Nama Sekolah</th><td>SMP Negeri 1 Pusako</td></tr>
+            <tr><th>NPSN</th><td>10403443</td></tr>
+            <tr><th>Alamat</th><td>JL. Muhammad Syekh RT.2 RW.4, Desa Benayah, Kecamatan Pusako, kabupaten Siak, Provinsi Riau</td></tr>
+            <tr><th>Telepon</th><td> +62 823 8693 8897 </td></tr>
+            <tr><th>Email</th><td>smpn1pusako@gmail.com</td></tr>
+            <tr><th>Media Sosial</th><td>
+              <a href="https://www.facebook.com/share/16xmTzDpjB/?mibextid=wwXIfr" class="me-3"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              <a href="https://youtube.com/@smpn1pusako543?si=OBuPh13yMI2w1Qbq"><i class="fa-brands fa-youtube"></i> YouTube</a>
+            </td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-5">
+        <div class="feature overflow-hidden">
+          <img src="assets/images/gerbang_smpn1.jpeg" class="w-100" alt="Gedung Sekolah">
+          <div class="p-3">
+            <strong>Gedung Sekolah</strong>
+            <p class="mb-0 small text-muted">Tampak depan SMPN 1 Pusako.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFIL: SEJARAH -->
+<section id="sejarah" class="py-5">
+  <div class="container">
+    <h2 class="section-title" id="profil">Sejarah Singkat</h2>
+    <p class="section-sub">Ringkasan berdirinya SMPN 1 Pusako.</p>
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <p>SMP Negeri 1 Pusako berdiri sejak tahun 2000 berdasarkan Keputusan Menteri Pendidikan Nasional. Awalnya bernama SLTP Negeri 4 Sungai Apit di Kab. Bengkalis, lalu pada tahun 2009 berubah menjadi SMP Negeri 15 Siak, dan akhirnya ditetapkan menjadi SMP Negeri 1 Pusako. Sejak dinegerikan, sekolah ini terus berkembang berkat bimbingan dan kepemimpinan para kepala sekolah yang pernah mengabdi di sini</p>
+      </div>
+      <div class="col-lg-4">
+        <div class="org-card p-3 d-flex align-items-center gap-3">
+          <img src="assets/images/kepsek.jpg" alt="Kepala Sekolah" class="square shadow" style="width: 150px;height: 150px;object-fit:cover;" alt="Kepala Sekolah">
+          <div>
+            <div class="badge badge-role">Kepala Sekolah</div>
+            <h5 class="mt-2 mb-1">Irdaleni, S.Pd</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISI MISI -->
+<section id="visi-misi" class="py-5 bg-surface">
+  <div class="container">
+    <h2 class="section-title">Visi & Misi</h2>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="stat-card h-100">
+          <h5 class="fw-bold mb-2">Visi</h5>
+          <p>“Terwujudnya sekolah unggulan yang menghasilkan generasi yang beriman dan bertakwa kepada Tuhan Yang Maha Esa, kreatif, kolaboratif, mencintai budaya Melayu, dan peduli terhadap lingkungan.”.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="stat-card h-100">
+          <h5 class="fw-bold mb-2">Misi</h5>
+          <ul class="mb-0">
+            <li><strong>Meningkatkan kualitas pembelajaran</strong> secara berkelanjutan untuk menghasilkan lulusan yang unggul dalam bidang akademis dan non-akademis.</li>
+            <li><strong>Mengintegrasikan nilai-nilai keagamaan</strong> ketakwaan dalam setiap kegiatan sekolah untuk membentuk siswa yang berakhlak mulia.</li>
+            <li><strong>Mengembangkan kurikulum dan kegiatan ekstrakurikuler</strong> yang melatih kreativitas, kolaborasi, dan kemandirian siswa.</li>
+            <li><strong>Menyelenggarakan kegiatan yang memperkenalkan, melestarikan, dan menumbuhkan rasa bangga terhadap budaya Melayu</strong> di kalangan siswa dan seluruh warga sekolah.</li>
+            <li><strong>Menerapkan program-program sekolah yang berfokus pada pelestarian lingkungan</strong> dan menumbuhkan kesadaran peduli terhadap lingkungan pada siswa.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRUKTUR ORGANISASI -->
+<section id="struktur" class="py-5">
+  <div class="container">
+    <h2 class="section-title"> Struktur Organisasi</h2>
+    <div class="row justify-content-center mb-4">
+      <!-- 3 kotak di atas -->
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <strong>Kepala Sekolah</strong><br>
+          Irdaleni, S.Pd
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <strong>Wakasek Bidang Humas</strong><br>
+          Ridwan, S.Ag
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <strong>Wakasek Bidang Kurikulum</strong><br>
+          Mutmainah, S.Pd
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <!-- 3 kotak di bawah -->
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <strong>Wakasek Bidang Kesiswaan</strong><br>
+          Deny Setyawan, S.Pd
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <strong>Guru</strong><br>
+          13 Orang
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3 shadow-sm">
+          <strong>TU & Staf</strong><br>
+          7 Orang
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA STATISTIK -->
+<section id="statistik" class="py-5 bg-surface">
+  <div class="container">
+    <h2 class="section-title">Data Statistik</h2>
+    <p class="section-sub">Jumlah guru, siswa, dan tenaga kependidikan.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="stat-card text-center">
+          <h1 class="fw-bold" id="count-guru">0</h1>
+          <div>Guru</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card text-center">
+          <h1 class="fw-bold" id="count-siswa">0</h1>
+          <div>Siswa</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="stat-card text-center">
+          <h1 class="fw-bold" id="count-tenaga">0</h1>
+          <div>Tenaga Kependidikan</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FASILITAS -->
+<section id="fasilitas" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Fasilitas Sekolah</h2>
+    <p class="section-sub">Sarana belajar yang nyaman dan lengkap.</p>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature">
+          <img src="assets/images/ruang_kelas.jpeg" class="w-100" alt="Ruang Kelas">
+          <div class="p-3">
+            <h5>Ruang Kelas</h5>
+            <p class="mb-0 small text-muted">Nyaman, terang, dan mendukung pembelajaran aktif.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature">
+          <img src="assets/images/perpustakaan.jpeg" class="w-100" alt="Perpustakaan">
+          <div class="p-3">
+            <h5>Perpustakaan</h5>
+            <p class="mb-0 small text-muted">Koleksi buku cetak dan digital untuk literasi.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature">
+          <img src="assets/images/labor_ipa.jpeg" class="w-100" alt="Laboratorium">
+          <div class="p-3">
+            <h5>Laboratorium IPA</h5>
+            <p class="mb-0 small text-muted">Praktikum sains.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature">
+          <img src="assets/images/lapangan_bola.jpg" class="w-100" alt="Lapangan">
+          <div class="p-3">
+            <h5>Lapangan Olahraga</h5>
+            <p class="mb-0 small text-muted">Futsal, basket, voli.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature">
+          <img src="assets/images/labor_komputer.jpg" class="w-100" alt="Laboratorium">
+          <div class="p-3">
+            <h5>Laboratorium Komputer</h5>
+            <p class="mb-0 small text-muted">Praktikum TIK.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature">
+          <img src="assets/images/wc_tamu.jpeg" class="w-100" alt="WC Tamu">
+          <div class="p-3">
+            <h5>WC Tamu</h5>
+            <p class="mb-0 small text-muted">WC untuk tamu yang datang.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EKSKUL -->
+<section id="ekskul" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Ekstrakurikuler</h2>
+    <p class="section-sub">Pramuka, Paskibra, olahraga, seni, Rohis, dan lainnya.</p>
+    <div class="row g-4">
+      <div class="col-md-3"><div class="stat-card h-100"><h6>Pramuka</h6><p class="mb-0 small text-muted">Latihan rutin & pengabdian.</p></div></div>
+      <div class="col-md-3"><div class="stat-card h-100"><h6>Paskibra</h6><p class="mb-0 small text-muted">Pembinaan kedisiplinan.</p></div></div>
+      <div class="col-md-3"><div class="stat-card h-100"><h6>Olahraga</h6><p class="mb-0 small text-muted">Futsal dan Voli.</p></div></div>
+      <div class="col-md-3"><div class="stat-card h-100"><h6>Rohis</h6><p class="mb-0 small text-muted">Keagamaan & karakter.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM UNGGULAN -->
+<section id="program" class="py-5 bg-surface">
+  <div class="container">
+    <h2 class="section-title">Program Unggulan</h2>
+    <ul class="timeline list-unstyled">
+      <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="ms-4">
+          <h6>Adiwiyata</h6>
+          <p class="mb-1 small text-muted">Program peduli lingkungan untuk mewujudkan sekolah yang bersih, hijau, dan sehat.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="ms-4">
+          <h6>English Day</h6>
+          <p class="mb-1 small text-muted">Meningkatkan kemampuan berbahasa Inggris melalui pembiasaan sehari penuh.</p>
+        </div>
+      </li>
+      <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="ms-4">
+          <h6>Pensi</h6>
+          <p class="mb-1 small text-muted">Ajang kreativitas dan bakat siswa melalui pertunjukan seni dan hiburan.</p>
+        </div>
+              <li class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="ms-4">
+          <h6>Sholat Berjamaah</h6>
+          <p class="mb-1 small text-muted">Pembiasaan ibadah bersama untuk membentuk karakter religius siswa.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- DOKUMENTASI (video embed) -->
+<section id="dokumentasi" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Dokumentasi Kegiatan</h2>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 rounded overflow-hidden">
+          <!-- YouTube/Vimeo atau file lokal -->
+          <iframe src="https://www.youtube.com/embed/j_we_Zkeprw?si=AoM02dUlZaNaG5qL" title="Dokumentasi" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-center align-items-center text-center">
+            “SMP Negeri 1 Pusako bukan hanya tempat menimba ilmu, tetapi juga ruang untuk menumbuhkan karakter, bakat, dan cita-cita setiap anak. Kami percaya bahwa pendidikan sejati bukan sekadar tentang angka dan nilai, melainkan bagaimana membentuk generasi yang berakhlak mulia, berdisiplin, dan siap menghadapi tantangan zaman. Dengan semangat kebersamaan, kerja keras guru, serta dukungan orang tua, kami berkomitmen untuk mencetak insan yang cerdas, berprestasi, dan bermanfaat bagi masyarakat, bangsa, dan negara.”
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMASI -->
+<section id="kalender" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Kalender Akademik</h2>
+    <p class="section-sub">Tahun Ajaran 2025 - 2026</p>
+    <div class="alert alert-light border d-flex align-items-center" role="alert">
+      <i class="fa-regular fa-calendar me-3 fs-4"></i>
+      Unduh kalender akademik versi PDF: <a href="assets/KALENDER PENDIDIKAN SMPN1PUSAKO 25-26.pdf" class="ms-1">Unduh</a>
+    </div>
+  </div>
+</section>
+
+<section id="jadwal" class="pb-5">
+  <div class="container">
+    <h2 class="section-title">Jadwal Kegiatan Penting</h2>
+    <div class="table-responsive">
+      <table class="table table-clean">
+        <thead><tr><th>Tanggal</th><th>Kegiatan</th><th>Keterangan</th></tr></thead>
+        <tbody>
+          <tr><td>14 Juli 2025 - 18 Juli 2025</td><td>MPLS</td><td>Peserta didik baru</td></tr>
+          <tr><td>— … —</td><td>Penilaian Tengah Semester</td><td>Kelas VII – IX</td></tr>
+          <tr><td>— … —</td><td>Ujian Sekolah</td><td>Kelas IX</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="ppdb" class="py-5 bg-surface">
+  <div class="container">
+    <h2 class="section-title">Informasi PPDB</h2>
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="stat-card">
+          <h5>Alur Pendaftaran</h5>
+          <ol class="mb-3">
+            <li>Membuat akun & mengisi formulir online/offline.</li>
+            <li>Unggah berkas: KK, Akta, Ijazah SD/SKL, Foto, dsb.</li>
+            <li>Verifikasi sekolah & pengumuman hasil.</li>
+            <li>Daftar ulang.</li>
+          </ol>
+          <h6>Syarat</h6>
+          <ul class="mb-3">
+            <li>Usia & domisili sesuai ketentuan.</li>
+            <li>Melampirkan dokumen asli/fotokopi.</li>
+          </ul>
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-file-pen me-2"></i>Informasi Lebih Lanjut</a>
+          <a href="#" class="btn btn-primary"><i class="fa-solid fa-file-pen me-2"></i>Daftar PPDB</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="stat-card">
+          <h6>Kontak PPDB</h6>
+          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>+62 822 9241 4686 (Mutmainah ,S.Pd.,Gr.)</p>
+          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>+62 813 7841 1290 (Hasneti ,S.Pd.,Gr.)</p>
+          <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i>smpn1pusako@gmail.com</p>
+           <!-- Tempat QR Code -->
+          <h6 class="mt-3">Scan QR Untuk Info Lebih Lanjut</h6>
+          <div id="qrcode"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Tambahkan library QRCodeJS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<script>
+  // Ganti link sesuai kebutuhan (misal link Google Form PPDB)
+  var linkPPDB = "https://drive.google.com/file/d/1-9whV79a1NFDrOFs7SIXEM8D3AN6HmTC/view?usp=drive_link"
+  // Generate QR Code di dalam div #qrcode
+  var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: linkPPDB,
+    width: 150,
+    height: 150,
+  });
+</script>
+
+<!-- KONTAK -->
+<section id="kontak" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Kontak & Pengaduan</h2>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <form class="stat-card">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Nama</label>
+              <input type="text" class="form-control" placeholder="Nama lengkap">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Email/No. HP</label>
+              <input type="text" class="form-control" placeholder="Email atau WhatsApp">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Pesan</label>
+              <textarea class="form-control" rows="4" placeholder="Tulis pesan/aduan"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="button" class="btn btn-primary"><i class="fa-regular fa-paper-plane me-2"></i>Kirim</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6">
+        <div class="stat-card h-100">
+          <h6>Alamat</h6>
+          <p class="mb-2">— alamat lengkap —</p>
+          <div class="ratio ratio-16x9 rounded overflow-hidden">
+            <!-- Sematkan peta (opsional ganti src Google Maps Embed) -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1021238.0768483373!2d100.89214067812499!3d0.9995176999999976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d6a1a39dcf7793%3A0xa6efe4223ba3a4c2!2sSMPN%20Pusako!5e0!3m2!1sid!2sid!4v1756973436892!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Script animasi -->
+<script>
+  // Fungsi animasi angka
+  function animateValue(id, start, end, duration) {
+    let obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
+
+  // Observer: jalankan animasi hanya saat section muncul di layar
+  const statistikSection = document.querySelector("#statistik");
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateValue("count-guru", 0, 13, 2000);    
+        animateValue("count-siswa", 0, 180, 2000);
+        animateValue("count-tenaga", 0, 7, 2000);
+        observer.unobserve(statistikSection); // supaya ga ngulang-ulang
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(statistikSection);
+</script>
+
+<!-- FOOTER -->
+<footer class="py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div class="d-flex align-items-center gap-2">
+      <img src="assets/images/LogoSMP1.png" class="logo" alt="">
+      <div>
+        <strong>SMPN 1 Pusako</strong><br>
+        <small>© <span id="year"></span>. SMPN 1 PUSAKO & KKN MAs 78.</small>
+      </div>
+    </div>
+    <div class="mt-3 mt-md-0">
+      <a href="https://www.facebook.com/share/16xmTzDpjB/?mibextid=wwXIfr" class="me-3 text-decoration-none text-light"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://youtube.com/@smpn1pusako543?si=OBuPh13yMI2w1Qbq" class="text-decoration-none text-light"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox Modal -->
+<div class="modal fade" id="lightbox" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-dark">
+      <button type="button" class="btn-close btn-close-white ms-auto m-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      <img id="lightboxImg" class="w-100 rounded-bottom" src="" alt="Foto">
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // tahun footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // lightbox
+  function openLightbox(src){ document.getElementById('lightboxImg').src = src; }
+
+  // animasi counter (ganti angkanya sesuai data real)
+  const target = {guru: 13, siswa: 180, tenaga: 7}; // <-- EDIT di sini
+  function animateCount(id, end){
+    const el = document.getElementById(id);
+    let start=0, dur=1000, t0=null;
+    function step(ts){
+      if(!t0) t0 = ts;
+      let p = Math.min((ts - t0)/dur,1);
+      el.textContent = Math.floor(p*end);
+      if(p<1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  window.addEventListener('load', ()=>{
+    animateCount('count-guru', target.guru);
+    animateCount('count-siswa', target.siswa);
+    animateCount('count-tenaga', target.tenaga);
+  });
+
+  // smooth scroll highlight (scrollspy already enabled)
+  document.querySelectorAll('.navbar a[href^="#"]').forEach(a=>{
+    a.addEventListener('click', function(e){
+      const id = this.getAttribute('href');
+      if(id.length>1 && document.querySelector(id)){
+        e.preventDefault();
+        document.querySelector(id).scrollIntoView({behavior:'smooth', block:'start'});
+        if(window.innerWidth < 992){
+          const nav = document.getElementById('navMenu');
+          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(nav);
+          bsCollapse.hide();
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
